@@ -1,0 +1,511 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* body {
+    background: linear-gradient(245.49deg, #1278b1 0%, #0d7eae 28.53%, #03334e 75.52%);
+} */
+
+.interface {
+    margin: 0 8%;
+}
+
+.flex {
+    display: flex;
+}
+
+h2.titulo {
+    color: #03334e;
+    font-size: 28px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #0d7eae;
+}
+
+header {
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+}
+
+header .menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav.menu-desktop ul {
+    display: flex;
+    align-items: center;
+}
+
+header button {
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #fffaff;
+    padding: 5px 10px;
+    border-radius: 30px;
+    transition: all .50s ease;
+}
+
+header button:hover {
+    background-color: #fffaff;
+    color: #0d7eae;
+}
+
+header button a:hover {
+    color: #0d7eae;
+}
+
+header button a {
+    color: #fffaff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all .50s ease;
+}
+
+header nav.menu-desktop ul li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fffaff;
+}
+
+/* Menu-mobile */
+.menu-mobile {
+    background-color: red;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 60%;
+}
+
+.menu-mobile nav ul {
+    padding: 30px 8%;
+    text-align: right;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-mobile nav ul li a {
+    font-size: 20px;
+    font-weight: 300;
+    display: block;
+    padding: 10px;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #fffaff;
+    color: #0d7eae;
+}
+
+/*.....................*/
+/* Banner */
+section.banner {
+    padding-top: 60px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(245.49deg, #1278b1 0%, #0d7eae 28.53%, #03334e 75.52%);
+}
+
+section.banner .hero {
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.banner .hero h1 {
+    color: #fff;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 2em;
+}
+
+section.banner .hero p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+section.banner .hero-img img {
+    width: 350px;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+section.banner .txt-hero a {
+    display: inline-block;
+    color: #fff;
+    border: 1px solid transparent;
+    background-color: #0d7eae;
+    padding: 12px 25px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+section.banner .txt-hero a.cta svg {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+section.banner .txt-hero a:hover {
+    background: transparent;
+    border: 1px solid #fff;
+    transform: translate(8px);
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/* ................ */
+
+/* Icones */
+section.links .icones {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section.links .icones svg {
+    display: block;
+    margin: 25px 0;
+    color: #fff;
+    transition: all .50s ease;
+}
+
+section.links .icones svg:hover {
+    color: #0d7eae;
+    transform: translateY(-5px);
+}
+
+/* .............. */
+
+/* Especialidades */
+section.especialidade {
+    padding: 40px 0;
+}
+
+section.especialidade .flex {
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.especialidade .especialidade-box {
+    width: 329px;
+    height: 250px;
+    border-radius: 15px;
+    margin-top: 25px;
+    color: #fffaff;
+    padding: 10px;
+    border: 1px solid #e2e2e268;
+    transition: all .50s ease;
+}
+
+.especialidade .especialidade-box:hover {
+    border: none;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #0d7eae7e;
+}
+
+.especialidade .especialidade-box svg {
+    height: 50px;
+    width: 50px;
+    color: #0d7eae;
+}
+
+.especialidade .especialidade-box a {
+    color: #03334e;
+    text-decoration: none;
+}
+
+.especialidade .especialidade-box p {
+    color: #000000;
+}
+
+.especialidade .especialidade-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ........... */
+
+/* Sobre */
+section.sobre {
+    padding: 55px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+section.sobre .flex .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button {
+    text-align: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: #0d7eae;
+    color: #fffaff;
+    cursor: pointer;
+    margin: 0 3px;
+    transition: .50s;
+}
+
+.btn-social button:hover,
+form .btn-enviar input:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #0d7eae;
+}
+
+/* ........... */
+
+/* Projectos */
+section.projectos {
+    margin-top: 60px;
+    padding: 40px 0;
+    box-shadow: 0 0 40px 10px #0d7eae1a;
+}
+
+section.projectos .flex {
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.img-projectos {
+    width: 380px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: all 8s;
+    cursor: pointer;
+    border-radius: 30px;
+    position: relative;
+}
+
+.img-projectos:hover {
+    background-position: 100%;
+}
+
+.img-projectos .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0d7eaec3;
+    border-radius: 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 20px;
+    opacity: 0;
+    transition: .6s;
+}
+
+.img-projectos .overlay:hover {
+    opacity: 1;
+}
+
+/* ........... */
+/* Formulário */
+section.formulario {
+    padding: 40px 0;
+    margin-top: 30px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 2px solid #03334e;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #03334e;
+    font-size: 15px;
+}
+
+form textarea {
+    resize: none;
+    height: 150px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+form .btn-enviar input {
+    height: 50px;
+    width: 120px;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #0d7eae;
+    color: #fff;
+    border: 0;
+    transition: all .50s ease;
+}
+
+
+/* ........... */
+
+/* footer */
+footer {
+    padding: 30px 4%;
+    box-shadow: 0 0 40px 10px #0d7eae1a;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .linha-footer {
+    padding: 20px 0;
+}
+
+footer .linha-footer:first-child {
+    border-bottom: 2px solid #03334e;
+}
+
+footer .linha-footer p {
+    display: flex;
+    align-items: center;
+    color: #0d7eae;
+}
+
+footer .linha-footer a {
+    margin-left: 5px;
+    color: #0d7eae;
+    text-decoration: none;
+}
+
+/* ........... */
+
+/* Responsivo */
+@media screen and (max-width:1020px) {
+
+    header nav.menu-desktop,
+    section.links {
+        display: none;
+    }
+
+    section.banner .hero-img img {
+        width: 100%;
+    }
+
+    section.banner .hero {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    section.banner .hero .txt-hero {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    section.banner .hero .txt-hero a {
+        font-size: 10px;
+    }
+
+    section.banner .hero .txt-hero p {
+        font-size: 13px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .btn-social button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .btn-social button svg {
+        width: 20px;
+    }
+
+    section.especialidade .especialidade-box {
+        width: 100%;
+    }
+
+    section.sobre .img-sobre img {
+        width: 100%;
+    }
+
+    section.projectos .img-projectos {
+        width: 100%;
+    }
+
+    section.banner {
+        width: 100%;
+    }
+
+    footer .linha-footer {
+        padding: 0 auto;
+        text-align: center;
+    }
+
+    footer .logo-footer {
+        margin-bottom: 20px;
+    }
+
+}
+
+/* ................ */

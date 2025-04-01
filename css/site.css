@@ -1,0 +1,261 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Gerais */
+.interface {
+  margin: 0 8%;
+}
+
+.flex {
+  display: flex;
+}
+
+h2.titulo {
+  text-align: center;
+  margin: 40px 0;
+}
+
+h2.titulo span {
+  color: #0d7eae;
+}
+
+.btn-social button {
+  text-align: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  background-color: #0d7eae;
+  color: #fffaff;
+  cursor: pointer;
+  margin: 0 3px;
+  transition: 0.5s;
+}
+
+.btn-social button:hover,
+form .btn-enviar input:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #0d7eae;
+}
+
+/* .................. */
+
+/* Header */
+header {
+  padding: 10px;
+  width: 100%;
+  position: absolute;
+}
+
+header .menu-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header button {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #fffaff;
+  padding: 5px 10px;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+}
+
+header button:hover {
+  background-color: #fffaff;
+  color: #0d7eae;
+}
+
+header button a:hover {
+  color: #0d7eae;
+}
+
+header button a {
+  color: #fffaff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}
+
+header nav ul li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #fffaff;
+}
+
+/* ............. */
+
+/* Banner */
+section.banner {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  background-image: url(/images/Bg1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ............. */
+/* Serviços */
+section.servicos .website-box {
+  width: 336px;
+  height: 450px;
+  border: 1px solid #0d7eae;
+  padding: 20px;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+}
+
+section.servicos .website-box img {
+  width: 100%;
+}
+
+section.servicos .website-box .box-texto h3 {
+  color: #0d7eae;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+section.servicos .website-box .box-texto li {
+  margin: 10px 0;
+}
+
+section.servicos .website-box a {
+  color: #fff;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #0d7eae;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+
+section.servicos .website-box a:hover {
+  background: transparent;
+  color: #0d7eae;
+  border: 1px solid #0d7eae;
+}
+
+section.servicos .website-box a.landing,
+a.portifolio {
+  margin-top: 40px;
+}
+
+section.servicos .website-box a.portifolio {
+  margin-top: 70px;
+}
+
+section.servicos .website-box a.blog {
+  margin-top: 60px;
+}
+
+section.servicos .flex {
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.servicos .website-box:hover {
+  border: none;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #0d7eae7e;
+}
+
+/* ............. */
+
+/* footer */
+footer {
+  margin-top: 40px;
+  box-shadow: 0 0 40px 10px #0d7eae1a;
+}
+
+footer .flex {
+  justify-content: space-between;
+}
+
+footer .linha-footer {
+  padding: 20px 0;
+}
+
+footer .linha-footer:first-child {
+  border-bottom: 2px solid #03334e;
+}
+
+footer .linha-footer p {
+  display: flex;
+  align-items: center;
+  color: #0d7eae;
+}
+
+footer .linha-footer a {
+  margin-left: 5px;
+  color: #0d7eae;
+  text-decoration: none;
+}
+
+/* ........... */
+
+/* Responsivo */
+@media screen and (max-width: 1020px) {
+  header .menu-desktop nav {
+    display: none;
+  }
+
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section.servicos .website-box {
+    width: 100%;
+  }
+
+  .btn-social button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn-social button svg {
+    width: 20px;
+  }
+
+  footer .linha-footer {
+    padding: 0 auto;
+    text-align: center;
+  }
+
+  footer .logo-footer {
+    margin-bottom: 20px;
+  }
+
+  footer {
+    padding: 30px 0;
+  }
+}
